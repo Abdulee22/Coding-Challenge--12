@@ -42,12 +42,9 @@ card.style.backgroundColor = "yellow";}); // Adding the color yellow
 const inventoryList = document.getElementById("inventoryList"); // Selecting inventory list
 
 function addInventoryItem(productName) {
-    const newItem = document.createElement("li"); // Creating new list item
-    newItem.setAttribute("class", "product-item"); // Adding class attribute
-    newItem.innerHTML = `${productName}`; // Setting inner HTML
-    inventoryList.appendChild(newItem); // Appending new item
-
-    newItem.addEventListener("click", () => {
-        inventoryList.removeChild(newItem); // Removing item on click
-    });
-}
+const newItem = document.createElement("li"); // Creating new list item
+newItem.setAttribute("class", "product-item"); // Adding class attribute
+newItem.innerHTML = `${productName}`; // Setting inner HTML
+inventoryList.appendChild(newItem); // Appending new item
+newItem.addEventListener("click", () => {
+inventoryList.removeChild(newItem); });} // Removing item on click
