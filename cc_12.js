@@ -30,3 +30,10 @@ expensesCard.innerHTML = `
 <h3>Expenses</h3>
 <p>$ 60</p>
 `;
+
+// Task 2: Updating Dashboard Metrics
+const metricCards = document.querySelectorAll(".metric-card"); // Selecting all metric cards
+const metricCardsArray = [...metricCards]; // Converting NodeList to array
+metricCardsArray.forEach(card => {
+card.innerText += " - Updated"; // Adding 'Updated' text
+card.style.backgroundColor = "yellow";}); // Adding the color yellow
