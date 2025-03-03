@@ -48,3 +48,23 @@ newItem.innerHTML = `${productName}`; // Setting inner HTML
 inventoryList.appendChild(newItem); // Appending new item
 newItem.addEventListener("click", () => {
 inventoryList.removeChild(newItem); });} // Removing item on click
+
+// Task 4: Business Customer Section - Event Bubbling
+const customerSection = document.getElementById("customerSection"); // Selecting existing customer section
+
+customerSection.addEventListener("click", () => {
+    console.log("Customer section clicked");});// Logging click event
+
+function addCustomerCard(name) {
+const customerCard = document.createElement("div"); // Createing customer card
+customerCard.setAttribute("class", "customer-card"); // Adding class
+customerCard.innerHTML = `<p>${name}</p>`; // Setting inner HTML
+customerSection.appendChild(customerCard); // Appending to section
+
+customerCard.addEventListener("click", event => {
+console.log("Customer card clicked"); // Logging customer card click
+event.stopPropagation();})} // Stopping event from bubbling 
+    
+// Adding sample customer cards
+addCustomerCard("Customer 1");
+addCustomerCard("Customer 2");
